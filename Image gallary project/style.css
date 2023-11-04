@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    background-image: linear-gradient(to bottom, rgba(177, 227, 114, 0.3), rgba(0, 0, 255, 0.4), rgba(221, 227, 149, 0.4));
+    background-color: rgb(225, 225, 218);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    height: 100%;
+    max-width: 1000px;
+    /* change from 1200px */
+    margin: 0 auto;
+    /* for putting all things in center */
+    padding: 20px;
+}
+
+.container h1 {
+    margin: 20px 0;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    text-shadow: 2px 0 10px rgb(184, 221, 184);
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    font-family: 'Lilita One', cursive;
+
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    width: 32%;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    filter: grayscale(100%);
+    /* filter: sepia(100%); */
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px #333);
+    /* this effect is on card not on image */
+    transition: 0.5s;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+}
+
+.card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0 0 0 0.5) 0%, rgba(255 255 255 0) 100%);
+    transition: 0.3s;
+
+}
+
+.card:hover figcaption {
+    opacity: 1;
+    transform: scale(1.03);
+}
